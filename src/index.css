@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .input {
+    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+  }
+}
+
+@layer utilities {
+  .padding {
+    @apply sm:px-16 px-8 sm:py-24 py-12;
+  }
+
+  .padding-x {
+    @apply sm:px-16 px-8;
+  }
+
+  .padding-y {
+    @apply sm:py-24 py-12;
+  }
+
+  .padding-l {
+    @apply sm:pl-16 pl-8;
+  }
+
+  .padding-r {
+    @apply sm:pr-16 pr-8;
+  }
+
+  .padding-t {
+    @apply sm:pt-24 pt-12;
+  }
+
+  .padding-b {
+    @apply sm:pb-24 pb-12;
+  }
+
+  .info-text {
+    @apply font-montserrat text-slate-gray text-lg leading-7;
+  }
+
+  /* ================================= OUR CSS STARTS HERE ===================================== */
+
+  /* ========================== NAV BAR COMPONENT =================== */
+  .navbar {
+    background: linear-gradient(90deg, #38EF7D 25%, #11998E 100%);
+    /* background: linear-gradient(90deg,#11998E 100%,#38EF7D 25%); */
+
+  }
+
+  .nav_btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    color: white;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+    border-radius: 4rem;
+    box-shadow: 0 0 0.8rem rgba(134, 147, 148, 0.8);
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s;
+    text-transform: uppercase;
+  }
+
+  .nav_btn:hover {
+    color: black;
+
+  }
+  .news_btn{
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    color: white;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+    border-radius: 1rem;
+    box-shadow: 0 0 0.8rem rgba(134, 147, 148, 0.8);
+    font-size: 0.7rem;
+    /* letter-spacing: 0.1rem; */
+    font-weight: 600;
+    transition: 0.5s;
+    text-transform: uppercase;
+  }
+
+  .nav_search {
+    font-size: 2rem;
+  }
+
+  .btn {
+    background: transparent;
+    /* border: 2px solid linear-gradient(90deg, #11998E 0%, #38EF7D 100%); */
+    border-width: 2px;
+    border-radius: 20px;
+    border-style: solid;
+    /* border-image: linear-gradient(90deg, #11998E 0%, #38EF7D 100%); */
+    border-image-slice: 1;
+    border-color: lightgreen;
+    color: transparent;
+    background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+    /* Adjust colors as needed */
+    background-clip: text;
+    font-weight: bold;
+    transition: border 300ms ease;
+  }
+
+  .btn_side {
+    color: white;
+    margin-left: 0.2rem;
+    font-size: 3rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+  }
+
+  .play_btn {
+    /* color: transparent; */
+    background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+    /* Adjust colors as needed */
+    border-radius: 50%;
+    font-size: 3rem;
+    border: 2px solid lightgreen;
+    color: rgb(59, 3, 94);
+    /* background-clip: text; */
+  }
+
+  /* ====================== HERO SECTION =======================*/
+  .hero_sec {
+    background: url('./assets/images/hero_bg.png');
+    background-size: cover;
+    /* z-index: 1000000; */
+    /* display: block; */
+  }
+
+  .hero_text {
+    color: white;
+  }
+
+  .hero_intro_text {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .hero_desc_text {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .hero_short {
+    background-color: white;
+    padding: 1.7rem 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero_span {
+    color: #00C397;
+    /* font-weight: 600; */
+    /* font-size: 2.5rem; */
+  }
+
+  /* =================== ABOUT US SECTION ===============================*/
+  .about_desc_text {
+    color: #4F7396;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .about_year {
+    color: transparent;
+    background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+    /* Adjust colors as needed */
+    background-clip: text;
+    font-size: 5rem;
+    font-weight: bolder;
+  }
+
+  /* =================== SERVICES SECTION ===============================*/
+  .card {
+    background-image: url('./assets/images/services_card.png');
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    padding: 3rem 3rem;
+    /* height: 800px; */
+  }
+
+  .ser_desc {
+    font-size: 0.7rem;
+  }
+  .pro_desc{
+    font-size: 1rem;
+  }
+
+  /* ======================= SKILLS SECTION ==========================*/
+  .skills_list {
+    row-gap: 1.5rem;
+    padding: 2.5rem;
+  }
+
+  .skills_title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+  }
+
+  .skills_name {
+    font-size: 1rem;
+    font-weight: 600;
+    /* color: transparent; */
+    /* background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%); */
+    /* Adjust colors as needed */
+    /* background-clip: text; */
+
+  }
+
+  .skills_bar,
+  .skills_percentage {
+    height: 5px;
+    border-radius: 0.25rem;
+
+  }
+
+  .skills_bar {
+    border: 1px solid lightgreen;
+    padding: 0.3rem;
+    padding-bottom: 0.7rem;
+    border-radius: 0.5rem;
+    /* background-color: lightgreen; */
+
+  }
+
+  .skills_number{
+    font-size: 1rem;
+    font-weight: 600;
+    color: transparent;
+    
+    background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+    background-clip: text;
+
+  }
+
+  .skills_percentage {
+    display: block;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+
+  }
+  .new{
+    background: linear-gradient(90deg, #055555 0%, #40E0D0 100%);
+  }
+  .skills_data{
+    width: 65%;
+  }
+
+  /* =================== NEWS SECTION ========================*/
+  .grid_section{
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-gap: 3rem;
+  }
+  @media (max-width: 1000px){
+    .grid_section{
+      display: flex;
+      flex-direction: column;
+
+
+    }
+  }
+
+  /* ===================== TEXTS SECTION ===============================*/
+  .semi_bold {
+    color: #0D141C;
+    font-weight: 600;
+    font-size: 1.0rem;
+  }
+
+  .text_grad {
+    /* color: linear-gradient(90deg, #11998E 0%, #38EF7D 100%); */
+    color: transparent;
+    background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+    /* Adjust colors as needed */
+    background-clip: text;
+
+  }
+
+  .bg_grad {
+    background-color: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+  }
+
+}
+
+
+.relative_box {
+  position: relative;
+  top: -8rem;
+  left: -5rem;
+  background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+  border-radius: 2rem;
+  /* background: lightgreen; */
+}
+@media (max-width:1000px) {
+  .relative_box{
+    top:0;
+    left:0;
+  }
+}
+.footer_img{
+  position: relative;
+  /* bottom: auto; */
+  top: -7rem;
+  /* left: -5rem; */
+}
+.btn_grad {
+  background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+}
+
+.text-container {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.text1-container {
+  opacity: 0;
+  /* transform: translateX(60px); */
+  transition: opacity 2s ease-out;
+}
+.fade-on{
+  opacity: 1;
+}
+.about-container{
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.service-container{
+  opacity: 0;
+  transform: translateY(-60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.service1-container{
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-up{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.up{
+  position: fixed;
+  bottom: 10;
+  right: 10;
+}
